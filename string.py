@@ -34,3 +34,7 @@ print("updated string: ", var1[:6] + 'Python')
 # string format operator
 
 print("My car is %s and it is %d model!" % ('Toyota', 2015))
+
+# unicode string
+
+print(u"Hello,World")
