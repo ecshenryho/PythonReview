@@ -99,11 +99,22 @@ print_info(10, 20, 30)
 # 6. keyword arguments
 
 
-def greet(name, message = "good morning"):
+def greet(name, message="good morning"):
     print("Hello", name + ', ' + message)
 
 
 greet("Henry")
 greet("Henry", "How are you doing?")
 greet(name="Anna", message="How do you do?")  # call function using keyword argument
-greet("Henry", message= "what are you doing?")
+greet("Henry", message="what are you doing?")
+
+# 7. arbitrary arguments
+# don't need to know in advanced the number of arguments that will be passed
+
+
+def greet2(*list_name):  # an asterisk to denote this type of argument.
+    for name in list_name:
+        print("Hello", name)
+
+
+greet2("Henry", "Anna", "Katie")
