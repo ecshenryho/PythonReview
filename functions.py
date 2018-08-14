@@ -118,3 +118,21 @@ def greet2(*list_name):  # an asterisk to denote this type of argument.
 
 
 greet2("Henry", "Anna", "Katie")
+
+
+# 8. Packing vs unpacking arguments
+def fun1(ar1, ar2, ar3):
+    print(ar1, ar2, ar3)
+
+
+def fun2(*args):  # pack all arguments passed to fun2 into tuples *args
+
+    args = list(args)  # convert tuples to list so we can modify it
+    # modify args
+    args[0] = 'Henry'
+    args[1] = 'Ho'
+    # unpacking args and calling function fun1
+    fun1(*args)
+
+
+fun2('Hello', 'handsome', 'bro')
