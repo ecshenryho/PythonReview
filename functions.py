@@ -95,3 +95,15 @@ def print_info(argument1, *var_tuple):  # * is placed to hold the values of all 
 print_info(10)
 print_info(10, 20, 30)
 
+
+# 6. keyword arguments
+
+
+def greet(name, message = "good morning"):
+    print("Hello", name + ', ' + message)
+
+
+greet("Henry")
+greet("Henry", "How are you doing?")
+greet(name="Anna", message="How do you do?")  # call function using keyword argument
+greet("Henry", message= "what are you doing?")
